@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+
      //+++++++++++++++++++++++++++++STRUCTURES+++++++++++++++++++++++++++++++++++++++++
-	 
-	 
-	  
-                struct Tache {
-                        int id;
-                        char titre[50];
-                        char description[200];
-                        char deadline[11]; 
-                        char statut[20];
-                           };
+	
+struct Tache {
+	int id;
+	char titre[50];
+	char description[200];
+	char deadline[11]; 
+	char statut[20];
+	   };
 
 // ===================================Déclarations =========================================
            struct Tache taches[1000];
             int nbTaches = 0;
             int prochainID = 1;
+
 //++++++++++++++++++++++++++++++++++AFFICHAGE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -66,7 +66,6 @@ void ajouterTache() {
   
   //+++++++++++++++++++++++++++++AFFICHAGE++++++++++++++++++++++++++++++++++
   
-  
 void afficherToutesLesTaches() {
     printf("\nListe de toutes les tâches :\n");
     for (int i = 0; i < nbTaches; i++) {
@@ -99,9 +98,7 @@ void modifierTache(int id) {
     printf("Tâche avec l'ID %d non trouvée.\n", id);
 }
 
-
 //+++++++++++++++++++++++++++++++++++SUPPRESSSION++++++++++++++++++++++++++++++++
-
 
 void supprimerTache(int id) {
     for (int i = 0; i < nbTaches; i++) {
@@ -116,8 +113,6 @@ void supprimerTache(int id) {
     }
     printf("Tâche avec l'ID %d non trouvée.\n", id);
 }
-
-
 
 //++++++++++++++++++++++++++++++DEADLINE+++++++++++++++++++++++++++++++++++++++
 void afficherTachesDeadlineProche() {
@@ -183,7 +178,6 @@ void modifierStatutTache(int id) {
 }
 //++++++++++++++++++++++++++++++++++++++++rechercherTacheParId++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 void rechercherTacheParId(int id) {
     printf("\nRecherche de la tâche par identifiant %d :\n", id);
     printf("ID\tTitre\tDescription\tDeadline\tStatut\n");
@@ -196,8 +190,6 @@ void rechercherTacheParId(int id) {
     }
     printf("Aucune tâche avec l'identifiant %d n'a été trouvée.\n", id);
 }
-
-
 
 //++++++++++++++++++++++++++++++++++++++++rechercherTacheParTitre++++++++++++++++++++++++++++++++++++++++++++++++++
 void rechercherTacheParTitre(char titre[100]) {
@@ -216,7 +208,6 @@ void rechercherTacheParTitre(char titre[100]) {
 }
 
 // +++++++++++++++++++++++++STATISTIQUES+++++++++++++++++++++++++++
-
 
 void afficherStatistiques() {
     printf("\nStatistiques :\n");
@@ -263,14 +254,7 @@ void afficherStatistiques() {
     printf("Nombre de tâches non terminées : %d\n", tachesNonTerminees);
 }
 
-
-
-
-
-
-
 //++++++++++++++++++++++MAIN+++++++++++++++++++++++
-
 
 int main() {
     int choix;
@@ -360,5 +344,3 @@ int main() {
 
     return 0;
 }
-
-
