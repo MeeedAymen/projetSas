@@ -2,7 +2,7 @@
 #include <string.h>
 #include <time.h>
      //+++++++++++++++++++++++++++++STRUCTURES+++++++++++++++++++++++++++++++++++++++++
-	 //salam
+	 
 	 
 	  
                 struct Tache {
